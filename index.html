@@ -10,6 +10,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 100vh; /* 画面全体の高さを使う */
             margin: 0; /* デフォルトのマージンを削除 */
         }
     
@@ -33,6 +34,7 @@
             position: absolute;
             top: 10px;
             right: 10px;
+            left: 275px;
             width: 15px;  /* デスクトップなど他の機器でのサイズ */
             height: 15px; /* デスクトップなど他の機器でのサイズ */
             background-color: orange;
@@ -49,7 +51,7 @@
         /* スマホの画面サイズに適用されるメディアクエリ */
         @media (max-width: 768px) {
             .close-btn {
-                width: 10px;  /* スマホ向けのサイズ */
+                width: 15px;  /* スマホ向けのサイズ */
                 height: 15px; /* スマホ向けのサイズ */
                 font-size: 12px; /* スマホ向けのフォントサイズ */
             }
