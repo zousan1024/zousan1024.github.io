@@ -17,8 +17,7 @@
         .container {
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
+            margin: 40px;
         }
 
         .product-card {
@@ -70,23 +69,66 @@
             background-color: #e64a19;
         }
 
+        .btn {
+            display: flex;
+            justify-content: space-between;
+            background-color: blueviolet;
+            height: 60px;
+            align-items: center;
+            max-width: 400px;
+            margin: 30px auto 0;
+            border-radius: 20px;
+        }
+
+        .selection {
+            width: 50px;
+            height: 50px;
+            margin: 5px 10px 5px 10px;
+            font-size: 20px;
+            background-color: greenyellow;
+            border-radius: 10%;
+        }
+
     </style>
 </head>
 <body>
-    <div>
-        <button onclick="btn1()">1</button>
-        <button onclick="btn2()">2</button>
-        <button onclick="btn3()">3</button>
+    <div class="btn">
+        <button class="selection" onclick="btn1()">1</button>
+        <button class="selection" onclick="btn2()">2</button>
+        <button class="selection" onclick="btn3()">3</button>
     </div>
 
     <div class="container">
         <div class="product-card">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgf0oN-7cn30KLfYBfccyra_hFxoXMHxB9KVH5dreJmoMw9wXgYxgVHyhhyfEUGHfuznoPPqyJg6zqXWVQ8jOXxFE80ZvnN5EIMSQE-OxtM9w8TZ3VmLAulZclahCFsFT2OgnTvLSDzALY/s800/food_onigirazu.png" alt="商品画像" class="product-image">
-            <h2 class="product-title">おにぎらず</h2>
-            <p class="original-price">¥500</p>
-            <p class="discount-price">¥250</p>
+            <img id="syouhin" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgf0oN-7cn30KLfYBfccyra_hFxoXMHxB9KVH5dreJmoMw9wXgYxgVHyhhyfEUGHfuznoPPqyJg6zqXWVQ8jOXxFE80ZvnN5EIMSQE-OxtM9w8TZ3VmLAulZclahCFsFT2OgnTvLSDzALY/s800/food_onigirazu.png" alt="商品画像" class="product-image">
+            <h2 id="syouhin_name" class="product-title">おにぎらず</h2>
+            <p id="price1" class="original-price">¥500</p>
+            <p id="price2" class="discount-price">¥250</p>
             <button class="buy-button">今すぐ購入</button>
         </div>
     </div>
+
+    <script>
+        function btn1() {
+            document.getElementById('syouhin').src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgf0oN-7cn30KLfYBfccyra_hFxoXMHxB9KVH5dreJmoMw9wXgYxgVHyhhyfEUGHfuznoPPqyJg6zqXWVQ8jOXxFE80ZvnN5EIMSQE-OxtM9w8TZ3VmLAulZclahCFsFT2OgnTvLSDzALY/s800/food_onigirazu.png';
+            document.getElementById("syouhin_name").innerText = "おにぎらず";
+            document.getElementById("price1").innerText = "¥500";
+            document.getElementById("price2").innerText = "¥250";
+        };
+
+        function btn2() {
+            document.getElementById('syouhin').src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEie6TR-aq90e00IBvvx5gKgms0LSMVDLNdJW664350Ozd68HgGjTUTB1yZvDFFa8hvIy6eVtNK1E5HL4HAMMpgNl9PqI-7HGnwd_QMmNJK8WTBzLJFX4XfZ0RHVd99zXZyYvQ3ZKJLUSYQJ/s800/obentou_hinomaru.png';
+            document.getElementById("syouhin_name").innerText = "日の丸弁当";
+            document.getElementById("price1").innerText = "¥600";
+            document.getElementById("price2").innerText = "¥400";
+        };
+
+        function btn3() {
+            document.getElementById('syouhin').src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyXa2KRibUfTFnQmWX31b35KsjUEIzBqi8PNiXJzrn78hKBIH4tXIiy_ntySy08n8AHLI2-oc0MzGc7EHFAOJmNiSnvZTl6ZteW1lO7Zt1w8bfexkasBEh6opOEiyMlPlpVv9boXXRgKo/s800/food_sandwitch.png';
+            document.getElementById("syouhin_name").innerText = "サンドイッチ";
+            document.getElementById("price1").innerText = "¥300";
+            document.getElementById("price2").innerText = "¥100";
+        };
+    </script>
 </body>
 </html>
