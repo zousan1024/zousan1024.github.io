@@ -94,6 +94,10 @@
             align-items: center;
         }
 
+        .zaiko {
+            font-size: 12px;
+            color: #888;
+        }
     </style>
 </head>
 <body>
@@ -109,7 +113,8 @@
             <h2 id="syouhin_name" class="product-title">おにぎらず</h2>
             <p id="price1" class="original-price">¥500</p>
             <p id="price2" class="discount-price">¥250</p>
-            <button class="buy-button">今すぐ購入</button>
+            <p id="zaiko" class="zaiko">在庫: <label class="kazu">10</label>個</p>
+            <button onclick="please()" class="buy-button">今すぐ購入</button>
         </div>
     </div>
 
@@ -119,6 +124,7 @@
             document.getElementById("syouhin_name").innerText = "おにぎらず";
             document.getElementById("price1").innerText = "¥500";
             document.getElementById("price2").innerText = "¥250";
+            document.getElementById("zaiko").innerText = "在庫: 10個";
         };
 
         function btn2() {
@@ -126,6 +132,7 @@
             document.getElementById("syouhin_name").innerText = "日の丸弁当";
             document.getElementById("price1").innerText = "¥600";
             document.getElementById("price2").innerText = "¥400";
+            document.getElementById("zaiko").innerText = "在庫: 15個";
         };
 
         function btn3() {
@@ -133,6 +140,11 @@
             document.getElementById("syouhin_name").innerText = "サンドイッチ";
             document.getElementById("price1").innerText = "¥300";
             document.getElementById("price2").innerText = "¥100";
+            document.getElementById("zaiko").innerText = "在庫: 5個";
+        };
+
+        function please() {
+            window.location.href='uso.html';
         };
     </script>
 </body>
