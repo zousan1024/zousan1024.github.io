@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>広告とバツボタン</title>
     <style>
         /* bodyにflexboxを使って、広告を中央に配置 */
@@ -31,6 +31,7 @@
     
         /* バツボタンのスタイル */
         .close-btn {
+            transform: scale(1); /* サイズが横長に見える場合は調整 */
             position: absolute;
             top: 10px;
             right: 10px;
@@ -46,16 +47,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-    
-        /* スマホの画面サイズに適用されるメディアクエリ */
-        @media (max-width: 768px) {
-            .close-btn {
-                max-width: 10px;
-                width: 10px;  /* スマホ向けのサイズ */
-                height: 10px; /* スマホ向けのサイズ */
-                font-size: 8px; /* スマホ向けのフォントサイズ */
-            }
         }
     </style>
 </head>
