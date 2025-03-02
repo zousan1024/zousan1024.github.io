@@ -34,20 +34,29 @@
             position: absolute;
             top: 10px;
             right: 10px;
-            width: 24px;  /* サイズを調整 */
-            height: 24px; /* サイズを調整 */
+            width: 10px;  /* デスクトップなど他の機器でのサイズ */
+            height: 10px; /* デスクトップなど他の機器でのサイズ */
             background-color: orange;
             color: white;
             border: none;
             border-radius: 50%;
-            font-size: 16px; /* フォントサイズを調整 */
+            font-size: 8px; /* デスクトップなど他の機器でのサイズ */
             font-weight: bold;
             cursor: pointer;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-    </style>    
+    
+        /* スマホの画面サイズに適用されるメディアクエリ */
+        @media (max-width: 768px) {
+            .close-btn {
+                width: 5px;  /* スマホ向けのサイズ */
+                height: 10px; /* スマホ向けのサイズ */
+                font-size: 8px; /* スマホ向けのフォントサイズ */
+            }
+        }
+    </style>
 </head>
 <body>
 
