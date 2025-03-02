@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SALE 商品</title>
+    
+    <style>
+        /* ベーススタイル */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .product-card {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+        }
+
+        .product-image {
+            width: 100%;
+            border-radius: 8px;
+            background-color: red;
+        }
+
+        .product-title {
+            font-size: 1.5rem;
+            color: #333;
+            margin: 15px 0;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: #888;
+            font-size: 1.2rem;
+        }
+
+        .discount-price {
+            font-size: 1.5rem;
+            color: #e53935;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .buy-button {
+            background-color: #ff5722;
+            color: white;
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .buy-button:hover {
+            background-color: #e64a19;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="product-card">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgf0oN-7cn30KLfYBfccyra_hFxoXMHxB9KVH5dreJmoMw9wXgYxgVHyhhyfEUGHfuznoPPqyJg6zqXWVQ8jOXxFE80ZvnN5EIMSQE-OxtM9w8TZ3VmLAulZclahCFsFT2OgnTvLSDzALY/s800/food_onigirazu.png" alt="商品画像" class="product-image">
+            <h2 class="product-title">おにぎらず</h2>
+            <p class="original-price">¥500</p>
+            <p class="discount-price">¥250</p>
+            <button class="buy-button">今すぐ購入</button>
+        </div>
+    </div>
+</body>
+</html>
