@@ -1,67 +1,44 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>広告とバツボタン</title>
-    <style>
-        /* bodyにflexboxを使って、広告を中央に配置 */
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* 画面全体の高さを使う */
-            margin: 0; /* デフォルトのマージンを削除 */
-        }
+<style>
+    /* bodyにflexboxを使って、広告を中央に配置 */
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* 画面全体の高さを使う */
+        margin: 0; /* デフォルトのマージンを削除 */
+    }
 
-        /* 広告のスタイル */
-        .ad-container {
-            background-color: green;
-            width: 300px;  /* 正方形にするためのサイズ */
-            height: 300px; /* 正方形にするためのサイズ */
-            position: relative;
-            background-image: url(https://free-icons.net/wp-content/uploads/2021/03/symbol090.png);/* 広告の背景 */
-            background-size: cover; /* 背景画像が要素全体に合うように */
-            border: 2px solid #ccc;  /* 広告の枠線 */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer; /* クリック可能であることを示す */
-        }
+    /* 広告のスタイル */
+    .ad-container {
+        background-color: green;
+        width: 300px;  /* 正方形にするためのサイズ */
+        height: 300px; /* 正方形にするためのサイズ */
+        position: relative;
+        background-image: url(https://free-icons.net/wp-content/uploads/2021/03/symbol090.png);/* 広告の背景 */
+        background-size: cover; /* 背景画像が要素全体に合うように */
+        border: 2px solid #ccc;  /* 広告の枠線 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer; /* クリック可能であることを示す */
+    }
 
-        /* バツボタンのスタイル */
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            width: 10px; /* サイズを大きくして見やすく */
-            height: 10px;
-            background-color: orange;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            font-size: 8px; /* フォントサイズを大きく */
-            font-weight: bold;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="ad-container" onclick="window.location.href='sale.html';">
-        <button class="close-btn" onclick="closeAd(event)">×</button>
-    </div>
-
-    <script>
-        // バツボタンがクリックされたときに広告を非表示にする関数
-        function closeAd(event) {
-            event.stopPropagation(); // 広告をクリックした時にページ遷移を防ぐ
-            document.querySelector('.ad-container').style.display = 'none';
-        }
-    </script>
-
-</body>
-</html>
+    /* バツボタンのスタイル */
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 24px;  /* サイズを調整 */
+        height: 24px; /* サイズを調整 */
+        background-color: orange;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        font-size: 16px; /* フォントサイズを調整 */
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
